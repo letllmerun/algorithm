@@ -1,0 +1,33 @@
+rows = 3
+cols = 3
+
+matrix = [
+    [5, 8, 2],
+    [7, 1, 6],
+    [4, 9, 3]
+]
+
+print("Matrix:")
+for row in matrix:
+    print(row)
+
+# Row sums
+row_sums = []
+
+print("\nRow sums:")
+for i in range(rows):
+    row_sum = sum(matrix[i])
+    row_sums.append(row_sum)
+    print(f"Sum of row {i + 1}: {row_sum}")
+
+# Column sums
+print("\nColumn sums:")
+for j in range(cols):
+    col_sum = 0
+    for i in range(rows):
+        col_sum += matrix[i][j]
+    print(f"Sum of column {j + 1}: {col_sum}")
+
+# Row with maximum sum
+max_row_index = row_sums.index(max(row_sums))
+print("\nRow with maximum sum:", max_row_index + 1)
