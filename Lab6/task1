@@ -1,0 +1,31 @@
+import random
+
+rows = int(input("Enter number of rows: "))
+cols = int(input("Enter number of columns: "))
+
+matrix = []
+
+for i in range(rows):
+    row = []
+    for j in range(cols):
+        row.append(random.randint(1, 20))
+    matrix.append(row)
+
+print("\nMatrix:")
+for row in matrix:
+    for value in row:
+        print(f"{value:4}", end="")
+    print()
+
+# Sum of all elements and maximum element
+total = 0
+maximum = matrix[0][0]
+
+for i in range(rows):
+    for j in range(cols):
+        total += matrix[i][j]
+        if matrix[i][j] > maximum:
+            maximum = matrix[i][j]
+
+print("\nTotal sum of elements:", total)
+print("Maximum element:", maximum)
