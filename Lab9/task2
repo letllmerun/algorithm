@@ -1,0 +1,8 @@
+class LinkedList:
+    def __init__(self):
+        self.head = None
+
+
+print("Task 2 result:")
+ll = LinkedList()
+print("Empty list created\n")
