@@ -1,0 +1,23 @@
+s1 = "listen"
+s2 = "silent"
+
+def is_anagram(a, b):
+    if len(a) != len(b):
+        return False
+    
+    count = {}
+    
+    for char in a:
+        count[char] = count.get(char, 0) + 1
+    
+    for char in b:
+        if char not in count:
+            return False
+        count[char] -= 1
+    
+    return all(value == 0 for value in count.values())
+
+if is_anagram(s1, s2):
+    print("Анаграммы")
+else:
+    print("Не анаграммы")
