@@ -1,0 +1,12 @@
+print("Preorder:")
+preorder(root)
+
+print("\nInorder:")
+inorder(root)
+
+print("\nPostorder:")
+postorder(root)
+
+print("\nКоличество узлов:", count_nodes(root))
+print("Количество листьев:", count_leaves(root))
+print("Высота:", tree_height(root))
