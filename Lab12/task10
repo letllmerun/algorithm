@@ -1,0 +1,18 @@
+size = 10
+hash_table = [[] for _ in range(size)]
+
+def hash_function(key):
+    return key % size
+
+def insert(key):
+    index = hash_function(key)
+    hash_table[index].append(key)
+
+# вставка элементов
+insert(15)
+insert(25)
+insert(35)
+insert(5)
+
+for i, bucket in enumerate(hash_table):
+    print(i, ":", bucket)
