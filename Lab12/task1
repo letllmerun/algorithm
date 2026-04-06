@@ -1,0 +1,9 @@
+students = {
+    "Алина": 5,
+    "Дамир": 4,
+    "Айбек": 3,
+    "Сабина": 5
+}
+
+for name, grade in students.items():
+    print(f"{name} - {grade}")
